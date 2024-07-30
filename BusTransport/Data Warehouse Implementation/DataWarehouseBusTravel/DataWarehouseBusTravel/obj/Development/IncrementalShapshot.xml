@@ -1,0 +1,103 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>BusTravel_DW</Database>
+    <Server>MARTYNA</Server>
+    <ConnectionString>Data Source=MARTYNA;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>aQbf2Fc9jvtWVlsoxLOfWFfTvUM=29.07.2024 16:32:5621.07.2024 18:16:54</TimeStamp>
+        <ID>
+          <String>Bus Travel DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>tXrkm9qjwU8PMqA32elpGD6L9tI=15.05.2024 13:11:5021.07.2024 18:16:54</TimeStamp>
+        <ID>
+          <String>Bus Travel DW</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>fCVxQFBXPFECb/BpgsQs09+4cLA=17.05.2024 14:44:1621.07.2024 18:16:54</TimeStamp>
+        <ID>
+          <String>ROUTE</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>rYDS7zAzlvsY/XrlWUE3q4+cRt4=17.05.2024 14:44:1621.07.2024 18:16:54</TimeStamp>
+        <ID>
+          <String>TIME</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>DP6jJG4fFrvFhor2V/50jxPct+c=17.05.2024 15:18:3821.07.2024 18:16:54</TimeStamp>
+        <ID>
+          <String>DATE</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>it55WxBt0RFyReUCVnP1eF2lTp0=17.05.2024 14:44:1621.07.2024 18:16:54</TimeStamp>
+        <ID>
+          <String>JUNK</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>4gIrBMMyXne0uQtx99eSVgv6RJ0=17.05.2024 14:44:1621.07.2024 18:16:54</TimeStamp>
+        <ID>
+          <String>BUS TRAVEL</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>oGW9qdbZR8wIg43G9Vb2V8v51OA=17.05.2024 14:44:1621.07.2024 18:16:54</TimeStamp>
+        <ID>
+          <String>BUS</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>/OHnVOnAcYmDBrO8UJbCdAdIN7Y=17.05.2024 14:44:1621.07.2024 18:16:54</TimeStamp>
+        <ID>
+          <String>BUS OFFICE</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>Ixxom3brWLVzBAcwSfQTpWYZVZU=17.05.2024 15:18:3821.07.2024 18:16:54ggKpEr34jDamGRZuANfTDi2ROIA=17.05.2024 15:18:3821.07.2024 18:16:54</TimeStamp>
+        <ID>
+          <String>Bus Travel DW</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>1rlqgAoR0QeEQh7hNJ8trPwZ7+8=12.04.2024 22:06:0221.07.2024 18:16:54</TimeStamp>
+      <ID>
+        <String>BusTravel_DW</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2024-07-29T15:09:34.66Z</LastDeployed>
+</DeploymentSnapshot>

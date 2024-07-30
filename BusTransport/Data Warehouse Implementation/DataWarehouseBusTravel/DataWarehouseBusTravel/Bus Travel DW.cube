@@ -1,0 +1,770 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d45f11f3-2ea6-45ef-94f5-402fb4dad30f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Bus Travel DW</ID>
+  <Name>Bus Travel DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="30" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1079" scrolltop="-1829" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="12665" y="13635" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01ee0000900180380100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="ROUTE" left="12953" top="5314" logicalid="15" controlid="1" masterid="0" hint1="0" hint2="0" width="3122" height="2946" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000320c0000820b0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_ROUTE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DATE" left="6486" top="11687" logicalid="16" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="3651" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000430e0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DATE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="BUS_TRAVEL" left="5420" top="4287" logicalid="17" controlid="3" masterid="0" hint1="0" hint2="0" width="5133" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00000d14000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_BUS_TRAVEL" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="TIME" left="20" top="5667" logicalid="18" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="2240" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000c0080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_TIME" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="JUNK" left="5764" top="0" logicalid="19" controlid="5" masterid="0" hint1="0" hint2="0" width="4445" height="1887" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00005d1100005f070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_JUNK" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="BUS" left="10281" top="10161" logicalid="20" controlid="6" masterid="0" hint1="0" hint2="0" width="3692" height="3787" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00006c0e0000cb0e0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_BUS" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="BUS_OFFICE" left="2897" top="11143" logicalid="21" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="2469" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000a5090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_BUS_OFFICE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="5937" top="1388" logicalid="22" controlid="8" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__BUS_TRAVE__FK_Ju__4CA06362]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="3" sourceattachpoint="1" destattachpoint="2" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6336" y="1887" />
+              <point x="6336" y="4287" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="10253" top="5288" logicalid="23" controlid="9" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__BUS_TRAVE__FK_Ro__49C3F6B7]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="10" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="12953" y="5687" />
+              <point x="10553" y="5687" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="2720" top="5838" logicalid="24" controlid="10" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__BUS_TRAVE__FK_De__4BAC3F29]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="3" sourceattachpoint="11" destattachpoint="24" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3020" y="6237" />
+              <point x="5420" y="6237" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="2720" top="6388" logicalid="25" controlid="11" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__BUS_TRAVE__FK_Ar__4AB81AF0]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="3" sourceattachpoint="13" destattachpoint="26" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3020" y="6787" />
+              <point x="5420" y="6787" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="9886" top="8987" logicalid="26" controlid="12" masterid="0" hint1="0" hint2="0" width="991" height="1674" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__BUS_TRAVE__FK_Us__48CFD27E]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="3" sourceattachpoint="0" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="10477" y="10161" />
+              <point x="10477" y="9761" />
+              <point x="10186" y="9761" />
+              <point x="10186" y="9287" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="6487" top="8987" logicalid="27" controlid="13" masterid="0" hint1="0" hint2="0" width="799" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__BUS_TRAVE__FK_Tr__47DBAE45]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="3" sourceattachpoint="0" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6886" y="11687" />
+              <point x="6886" y="9287" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="5597" top="10878" logicalid="28" controlid="14" masterid="0" hint1="0" hint2="0" width="4984" height="926" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK__BUS__FK_BusOffic__3F466844]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="6" sourceattachpoint="11" destattachpoint="18" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="5897" y="11277" />
+              <point x="8089" y="11277" />
+              <point x="8089" y="11504" />
+              <point x="10281" y="11504" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1079</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-1829</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>75</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="68a86429-4fe0-4525-a792-ba762f88e823">
+      <ID>Route</ID>
+      <Name>Route</Name>
+      <DimensionID>ROUTE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="1a829cf4-0105-4d23-8253-209168da245a">
+          <AttributeID>ID Route</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a65984f8-0e0a-4aee-8139-15d8ab0fdd60">
+          <AttributeID>Route Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="460daf6f-2565-41ea-ae6a-1f0a7233da22">
+          <AttributeID>Route Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="848f5fcf-7a63-405d-9cfd-4a8d19b5c0eb">
+          <AttributeID>Start Stop Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d16eeb17-7ac1-47b1-badd-17769e29848b">
+          <AttributeID>End Stop Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1f35024f-5a3d-45f0-8424-15e6ed075125">
+          <AttributeID>Connection Type</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="14ec6263-6651-42d2-a941-de90148c9712">
+      <ID>Departure Time</ID>
+      <Name>Departure Time</Name>
+      <DimensionID>TIME</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="d0624a72-1a1f-4e0a-a4f8-dadec349e624">
+          <AttributeID>ID Time</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bf84c4e2-1370-4c49-8000-11ebfad97f8d">
+          <AttributeID>Hour</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="565d1d5a-88f4-44bc-8401-90ccda844c3c">
+          <AttributeID>Minutes</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="afaa6e66-7043-4747-ab57-16c3d9819a90">
+          <AttributeID>Time Of Day</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="3ae306ee-4bd9-424e-a3a6-1a6a74dce349">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="9fcdafec-0aa3-4761-82be-b5f18ab0f67b">
+      <ID>Arrival Time</ID>
+      <Name>Arrival Time</Name>
+      <DimensionID>TIME</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9e9fbeb7-30a1-410b-b6c0-98c15f4a393b">
+          <AttributeID>ID Time</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="11bbde93-f1d0-49cc-b78a-276cc10f3bc4">
+          <AttributeID>Hour</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cc3b8828-ef0a-4340-81df-8ac6b34ddc2d">
+          <AttributeID>Minutes</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a78071fa-c0b5-401e-a299-45bb9b5250dd">
+          <AttributeID>Time Of Day</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="f34d1f48-4a40-4c55-8a44-109451347b6a">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="d5fd59dd-a50b-415b-badb-f8360dd26db7">
+      <ID>Junk</ID>
+      <Name>Junk</Name>
+      <DimensionID>JUNK</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="87e5d9f1-cedf-4e09-a2f2-e52f1f011d15">
+          <AttributeID>ID Junk</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bc92979a-c782-4d5a-863b-b346aab3ebc4">
+          <AttributeID>Satisfaction Level Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="39f2f9de-73ba-4d3c-bcac-d35562dc6c65">
+          <AttributeID>Occupation Category</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="e69c8147-d1a7-44e0-870b-59e9b755c48b">
+      <ID>DATE</ID>
+      <Name>DATE</Name>
+      <DimensionID>DATE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b94a1786-6766-447d-a74e-034829583035">
+          <AttributeID>ID Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1eb8b55f-611c-45c8-9c0e-8c797508bb1b">
+          <AttributeID>Date</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
+        </Attribute>
+        <Attribute dwd:design-time-name="70d6c82f-7a4c-4cd8-a761-45a0249e2927">
+          <AttributeID>Year</AttributeID>
+          <AggregationUsage>None</AggregationUsage>
+        </Attribute>
+        <Attribute dwd:design-time-name="76a21fd3-c739-4603-b280-cad345952762">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c52dfc9c-0d10-4e3d-bdff-94aebadae6ef">
+          <AttributeID>Month No</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="7afd03b7-69d6-4630-8519-55b544edbc90">
+          <AttributeID>Day Of Week</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8836e86d-6861-4df7-9ff1-6ab0bc2c205a">
+          <AttributeID>Day Of Week No</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="d74494f4-0c5d-49c6-a4a0-eec9a0d65739">
+          <AttributeID>Type Of Day</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="7ee86941-c6d2-4403-8913-87f56b077bf8">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="4d896f7b-e1f0-47b3-9152-5870d04d6962">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="610cae02-f608-4201-b240-0c79208eed7f">
+          <HierarchyID>Hierarchy 2</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="7c6efbd2-332b-463c-9408-9642d5b7d5e6">
+      <ID>BUS TRAVEL</ID>
+      <Name>BUS TRAVEL</Name>
+      <DimensionID>BUS TRAVEL</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="8553a7ca-c823-4e47-ae8c-910fb3872e1c">
+          <AttributeID>Responsible Region Number</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="3e7f20f1-b42b-448c-af6e-bc4dd52fa0b9">
+      <ID>BUS</ID>
+      <Name>BUS</Name>
+      <DimensionID>BUS</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="33df45f8-608b-4568-8f83-3d69cb33cdd6">
+          <AttributeID>ID Bus</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="197ecb5c-9a3c-4ae2-80be-79475218666e">
+          <AttributeID>Registration Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2978ce48-25ba-4d88-9340-80e1d128ca11">
+          <AttributeID>VIN</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e3a846f5-cc64-45cc-a662-b63799230ffb">
+          <AttributeID>Bus Size Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d075eb64-c97c-4b10-baea-cbd485ad71e5">
+          <AttributeID>Type Of Bus</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a34de02f-224b-445b-b2df-53d12c58794d">
+          <AttributeID>Additional Equipment</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="917404d8-34d7-4f5c-8365-3d9f98243b00">
+          <AttributeID>Feedback Monitor</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fcf4775a-41ce-4844-8277-abd9382a9074">
+          <AttributeID>Age Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fead1df5-6dbf-4f28-8b1c-1b4de77101fd">
+          <AttributeID>FK Bus Office</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0fe2c6f4-6fa5-4cf3-b209-ce5a55678d0d">
+          <AttributeID>Is Current</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="61134de2-65c4-4fd6-bb3d-0fb4b81f32e0">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="cff98359-4f59-4bfe-a6c5-293964a7ab68">
+      <ID>BUS OFFICE</ID>
+      <Name>BUS OFFICE</Name>
+      <DimensionID>BUS OFFICE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="62f4e321-9828-4ecc-b0cb-ed4ec244cfbf">
+          <AttributeID>ID Bus Office</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="14c39064-afaa-4def-9f8b-f65567597d24">
+          <AttributeID>Bus Office Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cc550529-0961-4e5a-a986-0a947683267d">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="81dad1a5-1b47-4c8a-bafd-8694b989a014">
+          <AttributeID>City</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="87f682e0-26f0-410b-843d-61e45f28cbad">
+          <AttributeID>Size Category</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="2eecc0d3-495d-4fcd-ad16-72369d810b7d">
+      <ID>BUS TRAVEL</ID>
+      <Name>BUS TRAVEL</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="e6ef6cea-a1ca-4cd5-8fa9-dae6b0776907">
+          <ID>Tickets Validated</ID>
+          <Name>Tickets Validated</Name>
+          <Source dwd:design-time-name="6430ca2b-659a-4075-b072-dc3df049ffc3">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="30097081-c9e6-4be9-affe-fc0f89a6ad10">
+              <TableID>dbo_BUS_TRAVEL</TableID>
+              <ColumnID>TicketsValidated</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="57d050fd-91b8-444c-a7b6-1f4cee6261e4">
+          <ID>Total Satisfaction Level Received</ID>
+          <Name>Total Satisfaction Level Received</Name>
+          <Source dwd:design-time-name="e2d000f5-ca79-4b7d-970d-ffee2aa5c290">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5fb75a6f-a5e4-48d6-a402-d991ffaba60c">
+              <TableID>dbo_BUS_TRAVEL</TableID>
+              <ColumnID>TotalSatisfactionLevelReceived</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="a335176e-266e-4791-9bb7-e1867f47b9a0">
+          <ID>Satisfaction Surveys Number</ID>
+          <Name>Satisfaction Surveys Number</Name>
+          <Source dwd:design-time-name="9b86cb00-61f2-41d1-b0f2-cfdcb27989de">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="1d5a1839-f3c8-43ab-a337-47410cfe3ea3">
+              <TableID>dbo_BUS_TRAVEL</TableID>
+              <ColumnID>SatisfactionSurveysNumber</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="6d26071a-5271-4b61-b4d1-3ed43a8389d5">
+          <ID>Responsible Region Number</ID>
+          <Name>Responsible Region Number</Name>
+          <AggregateFunction>DistinctCount</AggregateFunction>
+          <Source dwd:design-time-name="1fca3030-1819-45d4-9219-89a2870f0dd6">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="7128c56f-fdc8-4544-9344-5c05bc6eb364">
+              <TableID>dbo_BUS_TRAVEL</TableID>
+              <ColumnID>ResponsibleRegionNumber</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="1a4aa41f-a939-4c83-9e25-5477fbccda28">
+          <ID>Bus Total Capacity</ID>
+          <Name>Bus Total Capacity</Name>
+          <Source dwd:design-time-name="9b264d8c-15ad-41ed-b36d-0a3ec1dace8d">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="02bbf049-f6d5-4030-8791-0075c62d7863">
+              <TableID>dbo_BUS_TRAVEL</TableID>
+              <ColumnID>BusTotalCapacity</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="fe2125fb-7d43-4fb7-bf1e-167c929e9c3f">
+          <ID>BUS TRAVEL Count</ID>
+          <Name>BUS TRAVEL Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="908581ae-a010-4da5-bef9-b49d7bcedf44">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="2ee26006-1125-4784-a9f4-c584d49da17e">
+              <TableID>dbo_BUS_TRAVEL</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Holap</StorageMode>
+      <EstimatedRows>87451</EstimatedRows>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="64b0f09d-7155-47c0-9132-bc7f79e50673">
+          <CubeDimensionID>Route</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ea4f5c5f-aea1-4f40-873a-38c64d75fbcb">
+              <AttributeID>ID Route</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="db4576f7-ce2d-465b-829b-bb3c5381aa8a">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a15537ff-bbab-4733-b89e-b954c180c4f3">
+                    <TableID>dbo_BUS_TRAVEL</TableID>
+                    <ColumnID>FK_Route</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="32ec2616-00ad-456a-9cae-e2cbbf69acc6">
+          <CubeDimensionID>Departure Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="dd874820-7ead-4fee-bd1e-c4891c8e8096">
+              <AttributeID>ID Time</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="bebc1159-55a6-4979-9e30-3cd0a6d71cbc">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f48bb18e-632a-496d-a635-8c6f9ad2978b">
+                    <TableID>dbo_BUS_TRAVEL</TableID>
+                    <ColumnID>FK_DepartureTime</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d5a192ba-df4b-4087-938b-a4300daa927a">
+          <CubeDimensionID>DATE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="89abed85-be7f-44b6-8ca9-85107957e154">
+              <AttributeID>ID Date</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="33da6035-9d4d-44f8-a601-4b84031aa063">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9c7c7b39-50fa-41ae-ae32-64f8679edc28">
+                    <TableID>dbo_BUS_TRAVEL</TableID>
+                    <ColumnID>FK_TravelDate</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="096433f7-ab16-4892-a7e6-731a89eac7e0">
+          <CubeDimensionID>Arrival Time</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c5e309d5-dfef-417d-be82-0c3dc5ea2fd4">
+              <AttributeID>ID Time</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fbd48a05-2439-4b11-8868-c4706eaa1132">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a00b5049-9912-42c6-b56d-a83191d8ff17">
+                    <TableID>dbo_BUS_TRAVEL</TableID>
+                    <ColumnID>FK_ArrivalTime</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8c948464-3e46-4012-a406-c693542991d0">
+          <CubeDimensionID>Junk</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ea428c6e-d340-4aaa-888d-84e163e1da26">
+              <AttributeID>ID Junk</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ab6dc061-7e97-440f-900d-aad3b424a69b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6ce5eec5-0db4-4a0a-b614-c79d3fb76bad">
+                    <TableID>dbo_BUS_TRAVEL</TableID>
+                    <ColumnID>FK_Junk</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="43f8e1b6-4e28-4cea-88cd-7aefb0f450b4">
+          <CubeDimensionID>BUS TRAVEL</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1e719c21-5c0e-4f32-8a0e-13fa2a69db27">
+              <AttributeID>Responsible Region Number</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="42360e7c-b973-460a-be54-e4d08a8fedea">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a4acb7dc-e4ae-4d74-b7fe-9b0f5700bfed">
+                    <TableID>dbo_BUS_TRAVEL</TableID>
+                    <ColumnID>ResponsibleRegionNumber</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="07648cbe-2b97-4956-b5da-29d920c206cd">
+          <CubeDimensionID>BUS</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b9fa9506-b5de-43e2-9532-fe9767b5194e">
+              <AttributeID>ID Bus</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e969bd5e-b7a8-4ffb-9ea9-31c83a5d88ae">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="49346c1d-f812-43af-aa01-bcf29f401801">
+                    <TableID>dbo_BUS_TRAVEL</TableID>
+                    <ColumnID>FK_UsedBus</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="c1f0bd44-0fe8-4952-ac09-c82d76cf68b9">
+          <CubeDimensionID>BUS OFFICE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5b35e427-d172-402a-b556-f416e3e8bce9">
+              <AttributeID>ID Bus Office</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>BUS</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>FK Bus Office</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+      <AggregationDesigns />
+      <ProactiveCaching dwd:design-time-name="705ce223-bd06-44bd-a2cb-91b9feafac17">
+        <SilenceInterval>PT0S</SilenceInterval>
+        <Latency>PT0S</Latency>
+        <SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+        <ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+        <Enabled>true</Enabled>
+        <AggregationStorage>MolapOnly</AggregationStorage>
+        <Source xsi:type="ProactiveCachingInheritedBinding" dwd:design-time-name="573fe0b6-dcba-4b8d-803a-8e4b414347bc">
+          <NotificationTechnique>Server</NotificationTechnique>
+        </Source>
+      </ProactiveCaching>
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="0236aa20-ad77-4501-9da9-9998d668eac3">
+    <DataSourceViewID>Bus Travel DW</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="ac8c85c4-251c-4aa9-9ca2-be2563e09e43">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+The CALCULATE command controls the aggregation of leaf cells in the cube.
+If the CALCULATE command is deleted or modified, the data within the cube is affected.
+You should edit this command only if you manually specify how the cube is aggregated.
+*/
+CALCULATE;   
+CREATE MEMBER CURRENTCUBE.[Measures].[Bus Occupancy Percentage]
+ AS 100 * [Measures].[Tickets Validated]/[Measures].[Bus Total Capacity], 
+VISIBLE = 1  ;  
+CREATE MEMBER CURRENTCUBE.[Measures].[Average satisfaction level]
+ AS [Measures].[Total Satisfaction Level Received] / [Measures].[Satisfaction Surveys Number], 
+VISIBLE = 1;  
+CREATE MEMBER CURRENTCUBE.[Measures].[Average number of passengers]
+ AS [Measures].[Tickets Validated]/[Measures].[BUS TRAVEL Count], 
+VISIBLE = 1; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+  <Kpis>
+    <Kpi dwd:design-time-name="2710305c-0a80-4880-a881-c7539d14f0de">
+      <ID>KPI</ID>
+      <Name>Satisfaction Level</Name>
+      <AssociatedMeasureGroupID>BUS TRAVEL</AssociatedMeasureGroupID>
+      <Value>[Measures].[Average satisfaction level] </Value>
+      <Goal>( KPIValue( "Satisfaction Level" ), ParallelPeriod ( [DATE].[TRAVEL DATE HIERARCHY].[Month], 1, 
+[DATE].[TRAVEL DATE HIERARCHY].CurrentMember ) ) * 1.005 </Goal>
+      <Status>IIf (KPIVALUE( "Satisfaction Level" ) &gt;= KPIGoal("Satisfaction Level"), 1, -1)</Status>
+      <Trend>IIf ( KPIValue( "Satisfaction Level" ) &gt; ( KPIValue( "Satisfaction Level" ), ParallelPeriod ( [DATE].[TRAVEL DATE HIERARCHY].[Month], 1, [DATE].[TRAVEL DATE HIERARCHY].CurrentMember ) ), 1, -1)</Trend>
+      <TrendGraphic>Standard Arrow</TrendGraphic>
+      <StatusGraphic>Gauge - Ascending</StatusGraphic>
+    </Kpi>
+    <Kpi dwd:design-time-name="d0d60271-61ca-472e-ba67-958f50c51bfd">
+      <ID>KPI 1</ID>
+      <Name>Bus Occupancy</Name>
+      <AssociatedMeasureGroupID>BUS TRAVEL</AssociatedMeasureGroupID>
+      <Value>[Measures].[Tickets Validated]/[Measures].[BUS TRAVEL Count]</Value>
+      <Goal>(([Measures].[Bus Total Capacity]/[Measures].[BUS TRAVEL Count]) * 0.15)</Goal>
+      <Status>IIf(KPIValue("Bus Occupancy") &gt;= KPIGoal("Bus Occupancy"),1, -1) </Status>
+      <Trend>IIf ( KPIValue( "Bus Occupancy" ) &gt; ( KPIValue( "Bus Occupancy" ), ParallelPeriod ( [DATE].[TRAVEL DATE HIERARCHY].[Year], 1, [DATE].[TRAVEL DATE HIERARCHY].CurrentMember ) ), 1, -1) </Trend>
+      <TrendGraphic>Standard Arrow</TrendGraphic>
+      <StatusGraphic>Gauge - Ascending</StatusGraphic>
+    </Kpi>
+  </Kpis>
+</Cube>

@@ -1,0 +1,34 @@
+-- 1. Compare the total number of passengers per route on weekdays and weekends in current and previous month.
+WITH 
+MEMBER [Measures].[Prev Month Total Passengers] AS 
+    SUM(
+        PARALLELPERIOD([DATE].[TRAVEL DATE HIERARCHY].[Month], 1, [DATE].[TRAVEL DATE HIERARCHY].CurrentMember),
+        [Measures].[Tickets Validated]
+    )
+SELECT CrossJoin([DATE].[TRAVEL DATE HIERARCHY].[Year].[2021].[January], [DATE].[Type Of Day].Members) ON ROWS, 
+{[Measures].[Tickets Validated],  [Prev Month Total Passengers]} ON COLUMNS 
+FROM [Bus Travel DW]; 
+
+-- 2. Identify routes with the lowest bus occupancy (<15% of total bus capacity). 
+SELECT 
+  {[Measures].[Bus Occupancy Percentage]} ON COLUMNS, 
+  {[Route].[Route Number].MEMBERS} ON ROWS 
+FROM [Bus Travel DW] 
+WHERE 
+  [Junk].[Occupation Category].&[very low] 
+
+
+-- 3. Do certain routes are associated with more frequent passenger feedback?
+SELECT 
+(ORDER(TOPCOUNT([Route].[Route Number].Members, 10, [Measures].[Satisfaction Surveys Number]),
+[Measures].[Satisfaction Surveys Number], DESC)) ON ROWS,
+([Measures].[Satisfaction Surveys Number]) ON COLUMNS
+FROM [Bus Travel DW]
+
+
+
+
+
+
+
+

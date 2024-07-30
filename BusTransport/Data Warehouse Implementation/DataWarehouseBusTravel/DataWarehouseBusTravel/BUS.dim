@@ -1,0 +1,319 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="11629e67-f3de-4893-891b-5c58b725c068" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>BUS</ID>
+  <Name>BUS</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1285" scrolltop="-4877" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="5345" y="14429" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01010000900180380100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="BUS" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3687" height="4004" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000670e0000a40f0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_BUS" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1285</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-4877</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="6b045917-385a-4754-9b8e-4136e5d5c628">
+    <DataSourceViewID>Bus Travel DW</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="128668f0-3c3f-49aa-a69a-34d9e322f317">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="10e7bac6-bf8e-4a0e-b947-a8ce8a55ad6b">
+      <ID>ID Bus</ID>
+      <Name>ID Bus</Name>
+      <Usage>Key</Usage>
+      <EstimatedCount>302</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="13ac5c4a-5a6c-46e3-a6bb-05746a0750ca">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1a132ce4-aa84-47c3-bf53-fcfc2cddf88f">
+            <TableID>dbo_BUS</TableID>
+            <ColumnID>ID_Bus</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="63a4bfac-efb2-49c2-81ee-41a376125700">
+          <AttributeID>Registration Number</AttributeID>
+          <Name>Registration Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9644c2b3-15c3-4c2d-9a7a-ff91afdc8e80">
+          <AttributeID>VIN</AttributeID>
+          <Name>VIN</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3d8a8231-db44-4b49-bd53-062af6f34501">
+          <AttributeID>Bus Size Category</AttributeID>
+          <Name>Bus Size Category</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3b7cc7e3-2cb5-479e-b22a-a685a28edac1">
+          <AttributeID>Type Of Bus</AttributeID>
+          <Name>Type Of Bus</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="193e630e-d7ca-4ac2-a088-2855bbf49e6a">
+          <AttributeID>Additional Equipment</AttributeID>
+          <Name>Additional Equipment</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="fd42a23c-0a7b-40bb-a559-2f3d63b6f4ca">
+          <AttributeID>Feedback Monitor</AttributeID>
+          <Name>Feedback Monitor</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0c814ec6-8b1d-4e7b-9453-8a30eb79e91f">
+          <AttributeID>Age Category</AttributeID>
+          <Name>Age Category</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c8f96857-7227-438e-ab3c-694021afae44">
+          <AttributeID>FK Bus Office</AttributeID>
+          <Name>FK Bus Office</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ce98784c-b7aa-4c73-8239-85b85931cc6a">
+          <AttributeID>Is Current</AttributeID>
+          <Name>Is Current</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ef5cb235-6d7f-47c4-912b-fd903c7f1cd4">
+      <ID>Registration Number</ID>
+      <Name>Registration Number</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9952d1da-25e4-4507-9ed4-748ff856ffdd">
+          <DataType>WChar</DataType>
+          <DataSize>8</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="24c6287e-bc36-4163-b4f3-ee6cb66c00e7">
+            <TableID>dbo_BUS</TableID>
+            <ColumnID>RegistrationNumber</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b517363b-2f66-4632-a066-0cd9bba53633">
+      <ID>VIN</ID>
+      <Name>VIN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c19697cd-b6c5-4fc1-8f33-ff6287e9b135">
+          <DataType>WChar</DataType>
+          <DataSize>17</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ff97ede2-e841-4e9a-b579-824e5aa888b7">
+            <TableID>dbo_BUS</TableID>
+            <ColumnID>VIN</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2df9b95e-0c0c-4bc6-a3e3-c28f113dce9f">
+      <ID>Bus Size Category</ID>
+      <Name>Bus Size Category</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e6f328b7-5ca1-4985-a8a1-467f52882611">
+          <DataType>WChar</DataType>
+          <DataSize>15</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2307816f-a1a7-45c1-85a8-14702db30124">
+            <TableID>dbo_BUS</TableID>
+            <ColumnID>BusSizeCategory</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e01f7cc2-cd05-4426-af28-6c9b3c8ed5b0">
+      <ID>Type Of Bus</ID>
+      <Name>Type Of Bus</Name>
+      <EstimatedCount>3</EstimatedCount>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9e3c8d9a-89be-47b8-babe-11cda8f96bd2">
+          <DataType>WChar</DataType>
+          <DataSize>9</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d45c39f9-d49d-4649-bd31-70d4a23cdb28">
+            <TableID>dbo_BUS</TableID>
+            <ColumnID>TypeOfBus</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="903f692d-9adb-44d1-9540-1c7c2a8de885">
+      <ID>Additional Equipment</ID>
+      <Name>Additional Equipment</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a649c420-3ef7-45af-a2c3-cbe5d4c0843e">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f0e52a1f-41fd-47f3-a8ce-a15c280b5266">
+            <TableID>dbo_BUS</TableID>
+            <ColumnID>AdditionalEquipment</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f732fa70-4478-46a9-898d-1f3112a2e4de">
+      <ID>Feedback Monitor</ID>
+      <Name>Feedback Monitor</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="bb2cebde-7c45-4cd7-bf24-8edd33c22231">
+          <DataType>WChar</DataType>
+          <DataSize>3</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ccca820d-52eb-4d10-aa19-cb8b5f169eca">
+            <TableID>dbo_BUS</TableID>
+            <ColumnID>FeedbackMonitor</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5bbf9e36-2b20-4f01-a5d3-cc9c902757ce">
+      <ID>Age Category</ID>
+      <Name>Age Category</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4298f446-e644-49c9-84bb-5c6aa2904c7e">
+          <DataType>WChar</DataType>
+          <DataSize>6</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cc658c3d-182c-4654-a2f2-2a3aa95990db">
+            <TableID>dbo_BUS</TableID>
+            <ColumnID>AgeCategory</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ba580904-2770-488d-b308-56e7c21b9058">
+      <ID>FK Bus Office</ID>
+      <Name>FK Bus Office</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d576c416-1606-4fa0-beb6-7ce9b8f1c3c7">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9a5e7e0b-6c14-4eea-97e9-59efbfec4ca9">
+            <TableID>dbo_BUS</TableID>
+            <ColumnID>FK_BusOffice</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4d34349d-b249-4323-81aa-dc9613cea5ef">
+      <ID>Is Current</ID>
+      <Name>Is Current</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7125ec8c-afdb-408d-9592-4101100b0d2a">
+          <DataType>Boolean</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="087b19e2-ba6b-4194-8d0c-bf2162318dd7">
+            <TableID>dbo_BUS</TableID>
+            <ColumnID>IsCurrent</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="66495151-65ae-4232-8c6a-c8335ae79efb">
+      <ID>Hierarchy</ID>
+      <Name>BUS HIERARCHY</Name>
+      <Levels>
+        <Level dwd:design-time-name="eab7eae9-0b44-43a9-9b7a-55146e3fd2ab">
+          <ID>Type Of Bus</ID>
+          <Name>Type Of Bus</Name>
+          <SourceAttributeID>Type Of Bus</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="62e0f2de-521d-4830-a738-936facc18a22">
+          <ID>Age Category</ID>
+          <Name>Age Category</Name>
+          <SourceAttributeID>Age Category</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="edac78e4-6562-4ee3-bfa7-b5ad82f06d3e">
+          <ID>Registration Number</ID>
+          <Name>Registration Number</Name>
+          <SourceAttributeID>Registration Number</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="712f5ea5-e2f8-4bfe-b6ab-f9cdc44793a6">
+          <ID>VIN</ID>
+          <Name>VIN</Name>
+          <SourceAttributeID>VIN</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

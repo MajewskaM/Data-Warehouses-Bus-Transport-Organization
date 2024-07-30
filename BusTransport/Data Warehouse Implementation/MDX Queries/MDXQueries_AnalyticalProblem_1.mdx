@@ -1,0 +1,101 @@
+-- 1. Compare the average satisfaction level for all routes in the current month to those in the previous month.
+WITH 
+MEMBER [Prev month Avg Satisfaction] AS 
+    '(PARALLELPERIOD([DATE].[TRAVEL DATE HIERARCHY].[Month], 1, [DATE].[TRAVEL DATE HIERARCHY].CurrentMember),
+	[Measures].[Average satisfaction level])'
+
+SELECT 
+CrossJoin(
+    [DATE].[TRAVEL DATE HIERARCHY].[Year].[2020].[May],
+    [Route].[Route Number].Members
+) ON ROWS,
+{
+    [Measures].[Average satisfaction level], 
+    [Prev month Avg Satisfaction]
+} ON COLUMNS
+FROM [Bus Travel DW];
+
+
+
+-- 2. Whether passenger satisfaction level decreases when buses exceed a certain occupancy threshold? (<30%, 30-75%, >75%) 
+SELECT 
+([Junk].[Occupation Category].Members) ON ROWS,
+([Measures].[Average satisfaction level]) ON COLUMNS
+FROM [Bus Travel DW]
+
+
+
+-- 3. Do certain routes are associated with more frequent passenger feedback?
+SELECT 
+(ORDER(TOPCOUNT([Route].[Route Number].Members, 10, [Measures].[Satisfaction Surveys Number]),
+[Measures].[Satisfaction Surveys Number], DESC)) ON ROWS,
+([Measures].[Satisfaction Surveys Number]) ON COLUMNS
+FROM [Bus Travel DW]
+
+
+-- 4. Are passengers more likely to complete surveys when travelling on a bus with a feedback monitor installed? 
+
+WITH 
+MEMBER [BUS].[Feedback Monitor].[With/Without FeedbackMonitor DIFF] AS
+'[BUS].[Feedback Monitor].[yes] - [BUS].[Feedback Monitor].[no]'
+
+SELECT 
+([DATE].[TRAVEL DATE HIERARCHY].[Year].Members, [Measures].[Satisfaction Surveys Number]) ON ROWS,
+{
+    [BUS].[Feedback Monitor].[yes],
+    [BUS].[Feedback Monitor].[no],
+    [BUS].[Feedback Monitor].[With/Without FeedbackMonitor DIFF]
+} ON COLUMNS
+FROM [Bus Travel DW]
+
+
+
+-- 5. Which route has the lowest and highest average satisfaction level in the survey? 
+
+WITH 
+MEMBER [Measures].[Lowest Average Satisfaction Level] AS 
+    MIN(
+        [Route].[Route Number].Members,
+        [Measures].[Average satisfaction level]
+    )
+
+MEMBER [Measures].[Highest Average Satisfaction Level] AS 
+    MAX(
+        [Route].[Route Number].Members,
+        [Measures].[Average satisfaction level]
+    )
+
+SELECT 
+{
+    [Measures].[Average satisfaction level],
+    [Measures].[Lowest Average Satisfaction Level],
+    [Measures].[Highest Average Satisfaction Level]
+} ON COLUMNS,
+{
+    [DATE].[TRAVEL DATE HIERARCHY].[Year].Members
+} ON ROWS
+FROM [Bus Travel DW]
+
+
+-- 6. Do additional amenities such as air conditioning or wheelchair access affect satisfaction levels? 
+WITH 
+MEMBER [BUS].[Additional Equipment].[Additional Equipment DIFF] AS
+'[BUS].[Additional Equipment].[yes] - [BUS].[Additional Equipment].[no]'
+
+SELECT 
+([DATE].[TRAVEL DATE HIERARCHY].[Year].Members, [Measures].[Average satisfaction level]) ON ROWS,
+{
+    [BUS].[Additional Equipment].[yes],
+    [BUS].[Additional Equipment].[no],
+    [BUS].[Additional Equipment].[Additional Equipment DIFF]
+} ON COLUMNS
+FROM [Bus Travel DW]
+
+
+-- 7. Are old buses (Production Year < 2010) receiving lower ratings? 
+SELECT 
+{
+    [Measures].[Average satisfaction level]
+} ON COLUMNS,
+(CrossJoin([BUS].[Age Category].Members, [DATE].[Year].Members)) ON ROWS
+FROM [Bus Travel DW]

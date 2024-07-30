@@ -1,0 +1,86 @@
+--Compare the average number of passengers per route on weekdays and weekends in current and previous month. 
+
+WITH MEMBER [Prev month Avg number of passenger] AS '(PARALLELPERIOD([DATE].[TRAVEL DATE HIERARCHY].[Month], 1, [DATE].[TRAVEL DATE HIERARCHY].CurrentMember), [Measures].[Average number of passengers])' 
+SELECT CrossJoin([DATE].[TRAVEL DATE HIERARCHY].[Year].[2021].[January], [DATE].[Type Of Day].Members) ON ROWS, 
+{[Measures].[Average number of passengers],  [Prev month Avg number of passenger]} ON COLUMNS 
+FROM [Bus Travel DW]; 
+
+
+
+--On which days are buses most crowded: weekdays, weekends or holidays? 
+
+WITH MEMBER [Measures].[Working Days Crowdedness] AS  
+    ([Measures].[Bus Occupancy Percentage], 
+      [Date].[TRAVEL TYPE OF DAY HIERARCHY].[Type Of Day].[working day]) 
+MEMBER [Measures].[Weekend Crowdedness] AS 
+    ([Measures].[Bus Occupancy Percentage], 
+      [Date].[TRAVEL TYPE OF DAY HIERARCHY].[Type Of Day].[weekend])  
+MEMBER [Measures].[Vacation Crowdedness] AS 
+    ([Measures].[Bus Occupancy Percentage], 
+      [Date].[TRAVEL TYPE OF DAY HIERARCHY].[Type Of Day].[vacation]) 
+SELECT 
+{     [Measures].[Working Days Crowdedness],
+	  [Measures].[Weekend Crowdedness], 
+	  [Measures].[Vacation Crowdedness] 
+} ON COLUMNS 
+FROM  [Bus Travel DW] 
+WHERE 
+{     [DATE].[YEAR].[2020]} 
+
+
+
+--Identify routes with at least 10% increase in average passenger count from the current month to the previous month. 
+
+WITH MEMBER [Measures].[Passengers diff] AS  
+         '([DATE].[Month].CurrentMember,[Measures].[Average number of passengers]) - 
+	     ([DATE].[Month].PrevMember,[Measures].[Average number of passengers])' 
+SELECT 
+   {[Measures].[Average number of passengers], [Measures].[Passengers diff]} ON COLUMNS, 
+   FILTER( 
+      [Route].[Route Number].Members, 
+      (([Measures].[Average number of passengers] - [Measures].[Passengers diff]) / [Measures].[Passengers diff]) >= 0.1 
+   ) ON ROWS 
+FROM [Bus Travel DW] 
+WHERE 
+   [DATE].[Month].&[September] 
+
+
+
+--Identify routes with the lowest bus occupancy (<15% of total bus capacity). 
+
+SELECT 
+  {[Measures].[Bus Occupancy Percentage]} ON COLUMNS, 
+  {[Route].[Route Number].MEMBERS} ON ROWS 
+FROM [Bus Travel DW] 
+WHERE 
+  [Junk].[Occupation Category].&[very low] 
+
+
+
+--Compare the number of travelled routes from different bus offices in the current month to those in the previous month. 
+
+WITH MEMBER [Prev month number of travelled routes] AS '(PARALLELPERIOD([DATE].[TRAVEL DATE HIERARCHY].[Month], 1, [DATE].[TRAVEL DATE HIERARCHY].CurrentMember), [Measures].[BUS TRAVEL Count])' 
+SELECT CrossJoin([DATE].[TRAVEL DATE HIERARCHY].[Year].[2021].[July], [Route].[Route Number].Members, [BUS OFFICE].[Bus Office Name].Members) ON ROWS, 
+{[Measures].[BUS TRAVEL Count],  [Prev month number of travelled routes]} ON COLUMNS 
+FROM [Bus Travel DW]; 
+
+
+
+--From which region did the bus office operate the most bus travel? 
+
+SELECT 
+  TOPCOUNT(
+    FILTER(
+      [BUS OFFICE].[Region].Members, 
+      NOT ([BUS OFFICE].[Region].CurrentMember IS [BUS OFFICE].[Region].[All])), 1, [Measures].[BUS TRAVEL Count]) ON ROWS, 
+  {[Measures].[BUS TRAVEL Count]} ON COLUMNS 
+FROM [Bus Travel DW];
+
+
+
+--Compare the average number of passengers depending on the type of bus in current and previous month. 
+
+WITH MEMBER [Prev month avg number of passenger depending on type of bus] AS '(PARALLELPERIOD([DATE].[TRAVEL DATE HIERARCHY].[Month], 1, [DATE].[TRAVEL DATE HIERARCHY].CurrentMember), [Measures].[Average number of passengers])' 
+SELECT CrossJoin([DATE].[TRAVEL DATE HIERARCHY].[Year].[2021].[March], [BUS].[Type Of Bus].Members) ON ROWS, 
+{[Measures].[Average number of passengers],  [Prev month avg number of passenger depending on type of bus]} ON COLUMNS 
+FROM [Bus Travel DW]; 
