@@ -1,6 +1,9 @@
 # Data-Warehouses
 </br>
 🌱 University project for the Data Warehouses course. The aim of the project was to design and implement Business Intelligence systems in MS SQL Server.
+<br> 
+
+[Bus Transport Data Warehouse implementation in HIVE](https://github.com/MajewskaM/Data-Warehouse-Bus-Transport-HIVE)
 </br> --------------------------------------------------------------------------------------------------------------------- </br>
 
 ## Project Name: Bus-Transport-Organization
